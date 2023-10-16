@@ -39,9 +39,11 @@ def get_user(collection):
         {'_id': False}
     )
 
-    print(user)
-
-    return user
+    if user:
+        print(user)
+        return user
+    else:
+        print('Usuario no encontrado')
 
 
 @clear_system
