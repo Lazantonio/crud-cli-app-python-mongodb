@@ -44,9 +44,14 @@ def get_user(collection):
     return user
 
 
-def delete_user():
+@clear_system
+def delete_user(collection):
     '''C) Eliminar un usuario'''
-    print('Eliminar usuario')
+    username = input('Username: ')
+
+    return collection.delete_one(
+        {'username': username}
+    )
 
 
 def update_user():
