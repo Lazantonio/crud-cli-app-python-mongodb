@@ -23,12 +23,31 @@ def create_user(collection):
 
     user = dict(username=username, edad=edad, email=email)
 
+    direccion = input('¿Desea ingresar su dirección? (S/N)): ').lower()
+
+    if direccion == 's':
+        user['direccion'] = get_address()
+
     collection.insert_one(user)
 
     print(user)
 
     return user
 
+
+def get_address():
+    calle = input('Calle: ')
+    ciudad = input('Ciudad: ')
+    estado = input('Estado: ')
+    codigo_postal = input('Código Postal: ')
+
+    direccion = dict(calle=calle, 
+                    ciudad=ciudad,
+                    estado=estado,
+                    codigo_postal=codigo_postal
+                    )
+
+    return direccion
 
 @clear_system
 def get_user(collection):
