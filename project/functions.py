@@ -30,9 +30,18 @@ def create_user(collection):
     return user
 
 
-def get_user():
+@clear_system
+def get_user(collection):
     '''B) Consultar un usuario'''
-    print('Obtener usuario')
+    username = input('Username: ')
+    user = collection.find_one(
+        {'username': username},
+        {'_id': False}
+    )
+
+    print(user)
+
+    return user
 
 
 def delete_user():
