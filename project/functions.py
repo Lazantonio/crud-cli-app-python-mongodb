@@ -1,4 +1,5 @@
 import os
+import pprint
 
 
 def clear_system(function):
@@ -11,6 +12,12 @@ def clear_system(function):
 
     wrap.__doc__ = function.__doc__
     return wrap
+
+
+def show_user(user):
+    pp = pprint.PrettyPrinter(indent=4)
+
+    pp.pprint(user)
 
 
 @clear_system
@@ -30,7 +37,7 @@ def create_user(collection):
 
     collection.insert_one(user)
 
-    print(user)
+    show_user(user)
 
     return user
 
@@ -41,13 +48,14 @@ def get_address():
     estado = input('Estado: ')
     codigo_postal = input('Código Postal: ')
 
-    direccion = dict(calle=calle, 
+    direccion = dict(calle=calle,
                     ciudad=ciudad,
                     estado=estado,
                     codigo_postal=codigo_postal
                     )
 
     return direccion
+
 
 @clear_system
 def get_user(collection):
@@ -59,7 +67,7 @@ def get_user(collection):
     )
 
     if user:
-        print(user)
+        show_user(user)
         return user
     else:
         print('Usuario no encontrado')
