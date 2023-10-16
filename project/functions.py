@@ -1,3 +1,19 @@
+import os
+
+
+def clear_system(function):
+
+    def wrap(*args, **kwargs):
+        os.system('cls')
+        result = function(*args, **kwargs)
+        input('')
+        os.system('cls')
+
+    wrap.__doc__ = function.__doc__
+    return wrap
+
+
+@clear_system
 def create_user(collection):
     '''A) Crear un usuario'''
 
