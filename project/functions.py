@@ -1,6 +1,17 @@
-def create_user():
+def create_user(collection):
     '''A) Crear un usuario'''
-    print('Crear usuario')
+
+    username = input('Username: ')
+    edad = int(input('Edad: '))
+    email = input('Email: ')
+
+    user = dict(username=username, edad=edad, email=email)
+
+    collection.insert_one(user)
+
+    print(user)
+
+    return user
 
 
 def get_user():
@@ -16,6 +27,7 @@ def delete_user():
 def update_user():
     '''D) Actualizar un usuario'''
     print('Actualizar usuario')
+
 
 def default(*args, **kwargs):
     print('Opción no valida')
