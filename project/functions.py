@@ -39,6 +39,8 @@ def create_user(collection):
 
     show_user(user)
 
+    print("Usuario creado con éxito.")
+
     return user
 
 
@@ -78,10 +80,14 @@ def delete_user(collection):
     '''C) Eliminar un usuario'''
     username = input('Username: ')
 
-    return collection.delete_one(
-        {'username': username}
-    )
+    result = collection.delete_one({'username': username})
 
+    if result.deleted_count == 0:
+        print('Usuario no encontrado')
+    else:
+        print(f"El usuario se eliminó con éxito.")
+
+    return result
 
 @clear_system
 def update_user(collection):

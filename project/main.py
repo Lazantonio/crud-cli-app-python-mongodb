@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # Enviar un ping para confirmar una conexión exitosa
     try:
         client.admin.command('ping')
-        print("Has hecho ping a tu deployment. ¡Te has conectado exitosamente a MongoDB!")
+        print("¡Te has conectado exitosamente a MongoDB!")      
     except Exception as e:
         print(e)
 
@@ -33,6 +33,8 @@ if __name__ == '__main__':
 
     while True:
 
+        print("Selecciona una opción: ")
+        
         # Imprimir las descripciones de las opciones del menú 
         for key, function in options.items():
             print(function.__doc__)
