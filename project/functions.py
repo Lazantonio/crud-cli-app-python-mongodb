@@ -83,9 +83,33 @@ def delete_user(collection):
     )
 
 
-def update_user():
+@clear_system
+def update_user(collection):
     '''D) Actualizar un usuario'''
-    print('Actualizar usuario')
+    username = input('Username: ')
+    user = collection.find_one({'username': username})
+
+    if user:
+        print("Usuario encontrado, ingrese los nuevos datos (deje en blanco para mantener los actuales):")
+        new_username = input('Nuevo Username: ')
+        new_edad = input('Nueva Edad: ')
+        new_email = input('Nuevo Email: ')
+
+        if new_username:
+            user['username'] = new_username
+        if new_edad:
+            user['edad'] = int(new_edad)
+        if new_email:
+            user['email'] = new_email
+
+        direccion = input('¿Desea actualizar su dirección? (S/N)): ').lower()
+        if direccion == 's':
+            user['direccion'] = get_address()
+
+        collection.update_one({'username': username}, {"$set": user})
+        print("Usuario actualizado con éxito.")
+    else:
+        print('Usuario no encontrado')
 
 
 def default(*args, **kwargs):
