@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # Enviar un ping para confirmar una conexión exitosa
     try:
         client.admin.command('ping')
-        print("Has hecho ping a tu despliegue. ¡Te has conectado exitosamente a MongoDB!")
+        print("Has hecho ping a tu deployment. ¡Te has conectado exitosamente a MongoDB!")
     except Exception as e:
         print(e)
 
@@ -39,4 +39,4 @@ if __name__ == '__main__':
             break
 
         function_selected = options.get(option, fn.default)
-        function_selected()
+        function_selected(collection)
