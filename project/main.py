@@ -1,5 +1,7 @@
+# Importar las funciones personalizadas y la configuración
 import functions as fn
 from config import url
+# Importar las clases necesarias de pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -21,6 +23,7 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
 
+    # Definir las opciones del menú
     options = {
         'a': fn.create_user,
         'b': fn.get_user,
@@ -30,13 +33,17 @@ if __name__ == '__main__':
 
     while True:
 
+        # Imprimir las descripciones de las opciones del menú 
         for key, function in options.items():
             print(function.__doc__)
 
+        # Solicitar al usuario que elija una opción
         option = input('Opción: '.lower())
 
+        # Salir del bucle si el usuario ingresa 'q' o 'quit'
         if option == 'q' or option == 'quit':
             break
 
+        # Obtener la función seleccionada o default    
         function_selected = options.get(option, fn.default)
         function_selected(collection)
