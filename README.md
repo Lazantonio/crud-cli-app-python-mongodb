@@ -203,8 +203,8 @@ Las contribuciones son lo que hacen que la comunidad de código abierto sea un l
 Si tienes una sugerencia para mejorar este proyecto, haz un fork del repositorio y crea un pull request. También puedes simplemente abrir un issue con la etiqueta *“enhancement”*. ¡No olvides darle una estrella al proyecto! Gracias de nuevo.
 
 1. Haz un fork del Proyecto
-2. Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+2. Crea tu feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
 4. Push a la Branch (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
