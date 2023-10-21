@@ -19,9 +19,9 @@ if __name__ == '__main__':
     # Enviar un ping para confirmar una conexión exitosa
     try:
         client.admin.command('ping')
-        print("¡Te has conectado exitosamente a MongoDB!")      
+        print("¡Te has conectado exitosamente a MongoDB Atlas!")      
     except Exception as e:
-        print(e)
+        print("¡Ha ocurrrido un error al conectarse a MongoDB Atlas!", e)
 
     # Definir las opciones del menú
     options = {
