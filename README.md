@@ -65,7 +65,9 @@
 <!-- Acerca del Proyecto -->
 ## Acerca del Proyecto
 
-![MongoDB + Python][product-screenshot]
+<p align="center">
+  <img src="images\screenshot.jpg" alt="screenshot"/>
+</p>
 
 Este proyecto consiste en crear una aplicación CRUD simple de interfaz de línea de comandos utilizando Python y MongoDB Atlas para el programa Talento Cloud Pro de NEXA y AWS.
 
@@ -96,7 +98,7 @@ El resultado es una pequeña aplicación en Python que permite gestionar usuario
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Para ejecutar este proyecto localmente, necesitas tener instalado Python 3.9, así como una cuenta en MongoDB Atlas. Sigue estos pasos para configurar el proyecto:
+Para ejecutar este proyecto localmente, necesitas tener instalado Python 3.9 o superior, así como una cuenta en MongoDB Atlas. Sigue estos pasos para configurar el proyecto:
 
 ### Prerrequisitos
 
@@ -180,10 +182,10 @@ Escribe **"q"** o **"quit"** para terminar la ejecución de la aplicación.
 Estas son algunas de las mejoras que se podrían implementar en el futuro:
 
 - [ ] Añadir validaciones de entrada para evitar errores
-- [ ]Añadir una interfaz gráfica de usuario (GUI) para mejorar la experiencia de usuario
+- [ ] Añadir una interfaz gráfica de usuario (GUI) para mejorar la experiencia de usuario
 - [ ] Añadir más opciones de búsqueda y filtrado
 - [ ] Añadir más opciones de reporte y gráficos
-- [ ] Añadir una funcionalidad para exportar e importar los datos del catálogo y las ventas
+- [ ] Añadir una funcionalidad para exportar e importar los datos de los usuarios
 
 
 Consulta los [issues abiertos](https://github.com/FreddyPinto/crud-cli-app-python-mongodb/issues) para proponer características (y problemas conocidos).
@@ -256,7 +258,7 @@ Quiero agradecer a las siguientes personas y recursos que me han ayudado a reali
 [Licencia-url]: https://github.com/FreddyPinto/crud-cli-app-python-mongodb/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/FreddyPinto-/
-[product-screenshot]: images\screenshot.jpg
+[product-screenshot]: images/screenshot.jpg
 [Python]: https://img.shields.io/badge/Python-306998?logo=python&labelColor=white
 [Python-url]: https://www.python.org/
 [MongoDB]: https://img.shields.io/badge/MongoDB-mongodb?logo=mongodb&labelColor=white
