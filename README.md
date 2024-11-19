@@ -119,7 +119,7 @@ Para ejecutar este proyecto localmente, necesitas tener instalado Python 3.9 o s
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/FreddyPinto/crud-cli-app-python-mongodb.git
+   git clone https://github.com/FreddyPinto/crud-cli-app-python-mongodb
    ```
 2. Crea un entorno virtual de Python:
     ```sh
